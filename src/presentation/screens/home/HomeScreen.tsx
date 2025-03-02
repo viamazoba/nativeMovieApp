@@ -18,8 +18,16 @@ export const HomeScreen = () => {
 
 
     return (
-        <ScrollView>
-            <View style={{ marginTop: top + 20, paddingBottom: 30 }}>
+        <ScrollView
+            contentContainerStyle={{
+                backgroundColor: '#e8e5da',
+            }}
+        >
+            <View style={{
+                paddingTop: 30,
+                marginTop: top + 20,
+                backgroundColor: '#343a40',
+            }}>
                 <PosterCarousel
                     movies={nowPlaying}
                 />
