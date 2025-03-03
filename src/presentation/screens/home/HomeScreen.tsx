@@ -10,7 +10,7 @@ import { Divider } from '../../components/generalComponents/Divider';
 export const HomeScreen = () => {
 
     const { top } = useSafeAreaInsets();
-    const { isLoading, nowPlaying, popular, topRated, upcoming } = useMovies();
+    const { isLoading, nowPlaying, popular, topRated, upcoming, popularNextPage } = useMovies();
 
     if (isLoading) {
         return (
@@ -45,6 +45,7 @@ export const HomeScreen = () => {
                     <HorizontalCarousel
                         title="Populares"
                         movies={popular}
+                        loadNextPage={popularNextPage}
                     />
                     <Divider />
                 </View>
