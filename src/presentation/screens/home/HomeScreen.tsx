@@ -4,6 +4,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { PosterCarousel } from '../../components/movies/PosterCarousel';
 import { HorizontalCarousel } from '../../components/movies/HorizontalCarousel';
+import { Divider } from '../../components/generalComponents/Divider';
 
 
 export const HomeScreen = () => {
@@ -40,10 +41,12 @@ export const HomeScreen = () => {
                         paddingBottom: 20,
                     }}
                 >
+
                     <HorizontalCarousel
                         title="Populares"
                         movies={popular}
                     />
+                    <Divider />
                 </View>
 
                 <View
@@ -57,6 +60,7 @@ export const HomeScreen = () => {
                         title="Mejor calificadas"
                         movies={topRated}
                     />
+                    <Divider />
                 </View>
 
                 <View
@@ -70,6 +74,7 @@ export const HomeScreen = () => {
                         title="Próximamente"
                         movies={upcoming}
                     />
+                    <Divider />
                 </View>
             </View>
         </ScrollView>
