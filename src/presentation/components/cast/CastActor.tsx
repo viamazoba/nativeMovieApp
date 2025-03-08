@@ -39,13 +39,23 @@ const styles = StyleSheet.create({
         width: 100,
         height: 150,
         borderRadius: 10,
+        shadowColor: '#f8f9fa',
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5,
     },
     textTitle: {
         fontSize: 15,
         fontWeight: 'bold',
+        color: '#f8f9fa',
     },
     text: {
         fontSize: 12,
         opacity: 0.7,
+        color: '#f8f9fa',
     },
 });

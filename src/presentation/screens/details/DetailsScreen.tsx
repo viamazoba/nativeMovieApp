@@ -19,7 +19,7 @@ export const DetailsScreen = ({ route }: Props) => {
     }
 
     return (
-        <ScrollView>
+        <ScrollView style={{ backgroundColor: '#f8f9fa' }}>
             <MovieHeader
                 poster={movie.poster}
                 title={movie.title}

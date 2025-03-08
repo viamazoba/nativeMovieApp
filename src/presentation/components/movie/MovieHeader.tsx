@@ -1,5 +1,6 @@
 import { Image, Pressable, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { Divider } from '../generalComponents/Divider';
 
 interface Props {
     poster: string;
@@ -33,6 +34,10 @@ export const MovieHeader = ({ poster, originalTitle, title }: Props) => {
                 </Text>
             </View>
 
+            <View style={{ marginTop: 5, marginBottom: 10 }}>
+                <Divider />
+            </View>
+
             <View style={styles.backButton}>
                 <Pressable onPress={() => navigation.goBack()}>
                     <Text style={styles.backButtonText}>Regresar</Text>
@@ -51,7 +56,7 @@ const styles = StyleSheet.create({
             height: 10,
         },
         shadowOpacity: 0.24,
-        shadowRadius: 7,
+        shadowRadius: 1,
 
         elevation: 9,
         borderBottomEndRadius: 25,
@@ -69,16 +74,16 @@ const styles = StyleSheet.create({
     },
 
     marginContainer: {
-        marginHorizontal: 20,
+        paddingHorizontal: 20,
         marginTop: 20,
     },
     subTitle: {
-        fontSize: 16,
+        fontSize: 20,
         opacity: 0.8,
     },
     title: {
-        fontSize: 20,
-        fontWeight: 'bold',
+        fontSize: 25,
+        fontWeight: '600',
     },
     backButton: {
         position: 'absolute',
@@ -86,10 +91,14 @@ const styles = StyleSheet.create({
         elevation: 9,
         top: 35,
         left: 10,
+        backgroundColor: 'rgba(255, 209, 0, 0.55)',
+        paddingVertical: 5,
+        paddingHorizontal: 10,
+        borderRadius: 8,
     },
     backButtonText: {
         color: 'white',
-        fontSize: 25,
+        fontSize: 20,
         fontWeight: 'bold',
         textShadowColor: 'rgba(0, 0, 0, 0.55)',
         textShadowOffset: { width: -1, height: 1 },
